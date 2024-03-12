@@ -24,10 +24,10 @@ namespace lab1
 
         
 
-        public Problem(int seed)
+        public Problem(int n,int seed)
         {
             Random random = new Random(seed);
-            this.n = random.Next(10, 10);
+            this.n = n;      //random.Next(10, 10);
             this.seed = seed;
             this.c = c;
             
@@ -107,7 +107,7 @@ namespace lab1
         }
         public override string ToString()
         {
-            string result = $"Pojemnosc plecaka: {c}, liczba przedmiotow: {n}, nasionko losowania: {seed}\n, Lista przedmiotow:\n";
+            string result = $"Pojemnosc plecaka: {c}, liczba przedmiotow: {n}, nasionko losowania: {seed}\n";
 
             foreach (var item in list)
             {
