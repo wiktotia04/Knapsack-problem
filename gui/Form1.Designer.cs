@@ -43,9 +43,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(34, 222);
+            button1.Location = new Point(63, 474);
+            button1.Margin = new Padding(6);
             button1.Name = "button1";
-            button1.Size = new Size(156, 53);
+            button1.Size = new Size(290, 113);
             button1.TabIndex = 0;
             button1.Text = "run";
             button1.UseVisualStyleBackColor = true;
@@ -53,91 +54,102 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(34, 37);
+            textBox1.Location = new Point(63, 79);
+            textBox1.Margin = new Padding(6);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(182, 39);
             textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(34, 149);
+            textBox2.Location = new Point(63, 318);
+            textBox2.Margin = new Padding(6);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
+            textBox2.Size = new Size(182, 39);
             textBox2.TabIndex = 2;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(34, 88);
+            textBox3.Location = new Point(63, 188);
+            textBox3.Margin = new Padding(6);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
+            textBox3.Size = new Size(182, 39);
             textBox3.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(35, 18);
+            label1.Location = new Point(65, 38);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(104, 15);
+            label1.Size = new Size(208, 32);
             label1.TabIndex = 6;
             label1.Text = "ilośc przedmiotów";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(35, 70);
+            label2.Location = new Point(65, 149);
+            label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(39, 15);
+            label2.Size = new Size(218, 32);
             label2.TabIndex = 7;
-            label2.Text = "ziarno";
+            label2.Text = "pojemnosc plecaka";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(35, 131);
+            label3.Location = new Point(65, 279);
+            label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(109, 15);
+            label3.Size = new Size(110, 32);
             label3.TabIndex = 8;
-            label3.Text = "pojemność plecaka";
+            label3.Text = "nasionko";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(171, 301);
+            label4.Location = new Point(318, 642);
+            label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new Size(41, 15);
+            label4.Size = new Size(81, 32);
             label4.TabIndex = 9;
             label4.Text = "wyniki";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(353, 13);
+            label5.Location = new Point(656, 28);
+            label5.Margin = new Padding(6, 0, 6, 0);
             label5.Name = "label5";
-            label5.Size = new Size(101, 15);
+            label5.Size = new Size(203, 32);
             label5.TabIndex = 10;
             label5.Text = "lista przedmiotów";
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(21, 319);
+            richTextBox1.Location = new Point(39, 681);
+            richTextBox1.Margin = new Padding(6);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(191, 119);
+            richTextBox1.Size = new Size(351, 249);
             richTextBox1.TabIndex = 11;
             richTextBox1.Text = "";
             // 
             // richTextBox2
             // 
-            richTextBox2.Location = new Point(331, 31);
+            richTextBox2.Location = new Point(615, 66);
+            richTextBox2.Margin = new Padding(6);
             richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(456, 383);
+            richTextBox2.Size = new Size(843, 813);
             richTextBox2.TabIndex = 12;
             richTextBox2.Text = "";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(817, 450);
+            ClientSize = new Size(1517, 960);
             Controls.Add(richTextBox2);
             Controls.Add(richTextBox1);
             Controls.Add(label5);
@@ -149,6 +161,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button1);
+            Margin = new Padding(6);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

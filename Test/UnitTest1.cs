@@ -8,7 +8,7 @@ namespace Test
     public class UnitTest1
     {
         [TestMethod]
-        /* public void TestMethod1()
+         public void TestMethod1()
          {
              List<int> sizes = new List<int>() { 10, 20, 30, 40, 50 };
                   foreach (int n in sizes)
@@ -23,17 +23,18 @@ namespace Test
 
                          }
              }
-         }*/
-
-        /* public void TestMethod2() //Sprawdzenie, czy jeœli co najmniej jeden przedmiot spe³nia ograniczenia, to zwrócono co najmniej jeden element.
+         }
+        [TestMethod]
+        public void TestMethod2() //Sprawdzenie, czy jesli co najmniej jeden przedmiot spelnia ograniczenia, to zwrócono co najmniej jeden element.
          {
              Problem problem = new Problem(4, 2);
              problem.list[0].weight = 1;
              lab1.Result result = problem.Solve(10);
-             Assert.IsTrue(result.TotalWeight > 0, "Oczekiwano co najmniej jednego elementu w wyniku rozwi¹zania.");
-         }*/
+             Assert.IsTrue(result.TotalWeight > 0, "Oczekiwano co najmniej jednego elementu w wyniku rozwiazania.");
+         }
+        [TestMethod]
 
-        /*public void TestMethod3() //Sprawdzenie, czy jeœli ¿aden przedmiot nie spe³nia ograniczeñ, to zwrócono puste rozwi¹zanie.
+        public void TestMethod3() //Sprawdzenie, czy jesli zaden przedmiot nie spelnia ograniczen, to zwrócono puste rozwiazanie.
         {
             int capacity = 10;
             Problem problem = new Problem(4, 2);
@@ -46,8 +47,9 @@ namespace Test
             Assert.AreEqual(0, result.TotalValue, "Oczekiwano, ¿e TotalValue bêdzie równe zero.");
             Assert.AreEqual(0, result.TotalWeight, "Oczekiwano, ¿e TotalWeight bêdzie równe zero.");
             Assert.IsFalse(result.index.Any(), "Oczekiwano, ¿e lista indeksów bêdzie pusta.");
-        }*/  
-        /* public void TestMethod4() // Sprawdzenie poprawnoœci wyniku dla konkretnej instancji.
+        }
+        [TestMethod]
+         public void TestMethod4() // Sprawdzenie poprawnoœci wyniku dla konkretnej instancji.
          {
 
 
@@ -63,9 +65,10 @@ namespace Test
              Assert.AreEqual(expectedTotalValue, result.TotalValue, "Oczekiwano, ¿e TotalValue bêdzie równe " + expectedTotalValue);
              Assert.AreEqual(expectedTotalWeight, result.TotalWeight, "Oczekiwano, ¿e TotalWeight bêdzie równe " + expectedTotalWeight);
              CollectionAssert.AreEqual(expectedIndexes, result.index.ToArray(), "Oczekiwano, ¿e indeksy bêd¹ równe " + string.Join(", ", expectedIndexes));
-         }*/
+         }
 
-        /* public void TestMethod5() //czy jeœli ustawimy max pojemnoœæ plecaka na sume wszytkich wag czy totalweight bêdzie taka sama
+        [TestMethod]
+        public void TestMethod5() //czy jeœli ustawimy max pojemnoœæ plecaka na sume wszytkich wag czy totalweight bêdzie taka sama
          {
 
              Problem problem = new Problem(4, 2);
@@ -74,9 +77,10 @@ namespace Test
           
              Assert.AreEqual(maxCapacity, result.TotalWeight, "Oczekiwano, ¿e TotalWeight bêdzie równe maksymalnej pojemnoœci plecaka.");
 
-         }*/
+         }
 
-        /* public void TestMethod6() //sprawdzenie czasu wykonywania siê zadania dla du¿ej iloœci przedmiotów
+        [TestMethod]
+        public void TestMethod6() //sprawdzenie czasu wykonywania siê zadania dla du¿ej iloœci przedmiotów
          {
 
              Problem problem = new Problem(100, 5); 
@@ -94,30 +98,33 @@ namespace Test
              Console.WriteLine($"Czas wykonania: {stopwatch.ElapsedMilliseconds} ms");
 
              Assert.IsTrue(stopwatch.ElapsedMilliseconds < 1000, "Czas wykonania jest zbyt d³ugi.");
-         }*/
+         }
 
-        /* public void TestMethod7() //Sprawdzenie, czy kolejnoœæ przedmiotów ma wp³ywa na znalezione rozwi¹zanie
+        [TestMethod]
+        public void TestMethod7() //Sprawdzenie, czy kolejnoœæ przedmiotów ma wp³ywa na znalezione rozwi¹zanie
         {
-            Problem problemDecreasing = new Problem(10, 1);
-            Problem problemIncreasing = new Problem(10, 1);
+            Problem problemDecreasing = new Problem(15, 1);
+            Problem problemIncreasing = new Problem(15, 1);
 
             int capacity = new Random().Next(1, 100);
 
             problemDecreasing.Solve(capacity);   
 
-            problemIncreasing.list.Reverse(); 
+            problemIncreasing.list.Reverse();
             
+            problemIncreasing.Solve(capacity);
 
             Console.WriteLine(problemIncreasing.ToString());
             Console.WriteLine(problemDecreasing.ToString());
            
-            Assert.IsTrue(problemDecreasing.Solve(capacity).ToString() == problemIncreasing.Solve(capacity).ToString());
+            Assert.IsTrue(problemDecreasing.Solve(capacity).ToString() != problemIncreasing.Solve(capacity).ToString());
         
            
 
-        }*/
+        }
 
-        /*public void TestMethod8() //czy dzia³a dobrze jak lista przyk³adów jest pusta
+        [TestMethod]
+        public void TestMethod8() //czy dzia³a dobrze jak lista przyk³adów jest pusta
         {
             Problem problem = new Problem(0,1);
 
@@ -127,8 +134,8 @@ namespace Test
             Assert.AreEqual(0, result.TotalValue, "Oczekiwano, ¿e TotalValue bêdzie równe zero.");
             Assert.AreEqual(0, result.TotalWeight, "Oczekiwano, ¿e TotalWeight bêdzie równe zero.");
             Assert.IsFalse(result.index.Any(), "Oczekiwano, ¿e lista indeksów bêdzie pusta.");
-        }*/
-
+        }
+        [TestMethod]
         public void TestMethod9() //du¿a pojemnoœæ plecaka, czy dzia³a
         {
             var stopwatch = new System.Diagnostics.Stopwatch();

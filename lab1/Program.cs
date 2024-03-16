@@ -11,8 +11,8 @@ namespace lab1
 
         static void Main(string[] args)
         {
-            Problem problem = new Problem(5,2);
-            Result result = problem.Solve(18);
+            Problem problem = new Problem(10,1);
+            Result result = problem.Solve(20);
             Console.WriteLine(problem);
             Console.WriteLine(result.ToString());
 

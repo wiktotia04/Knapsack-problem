@@ -39,26 +39,11 @@ namespace lab1
             }
         }
 
-        /*public void Plecak(List<Item> list)
-        {
-            for (int i = 0; i < list.Count; i++)
-            {
-
-                if (list[i].weight <= c)
-                {
-                    list[i].x = 1;
-                }
-                else
-                {
-                    list[i].x = 0;
-                }
-
-            }
-        }*/
+     
 
         public Result Solve(int capacity)
         {
-            //Plecak(list);
+           
 
             Result result = new Result();
 
@@ -107,7 +92,7 @@ namespace lab1
         }
         public override string ToString()
         {
-            string result = $"Pojemnosc plecaka: {c}, liczba przedmiotow: {n}, nasionko losowania: {seed}\n";
+            string result = $"backpack capacity: {c}, amount of items : {n}, seed: {seed}\n";
 
             foreach (var item in list)
             {
